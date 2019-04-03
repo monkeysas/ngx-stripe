@@ -33,7 +33,10 @@ export interface StripeJS {
   createSource(sourceData: SourceData): Promise<SourceResult>;
   retrieveSource(source: SourceParams): Promise<SourceResult>;
   paymentRequest(options: PaymentRequestOptions): any;
-  handleCardPayment(clientSecret: string, el: Element, data: any): any;
+  handleCardPayment(clientSecret: string, el: Element, data?: any): any;
+  confirmPaymentIntent(clientSecret: string, el: Element, data: any): any;
+  retrievePaymentIntent(clientSecret: string): any;
+
 }
 
 export interface Options {

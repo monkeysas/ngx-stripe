@@ -134,10 +134,26 @@ export class StripeInstance implements StripeServiceInterface {
     return undefined;
   }
 
-  public handleCardPayment(clientSecret: string, el: Element, data: any) {
+  public handleCardPayment(clientSecret: string, el: Element, data?: any) {
     const stripe = this.getInstance();
     if (stripe) {
       return stripe.handleCardPayment(clientSecret, el, data);
+    }
+    return undefined;
+  }
+
+  public confirmPaymentIntent(clientSecret: string, el: Element, data?: any) {
+    const stripe = this.getInstance();
+    if (stripe) {
+      return stripe.confirmPaymentIntent(clientSecret, el, data);
+    }
+    return undefined;
+  }
+
+  public retrievePaymentIntent(clientSecret: string) {
+    const stripe = this.getInstance();
+    if (stripe) {
+      return stripe.retrievePaymentIntent(clientSecret);
     }
     return undefined;
   }

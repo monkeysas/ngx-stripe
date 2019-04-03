@@ -15,6 +15,12 @@
 ## Features
 
 Add SCA PaymentIntent => waiting for ngx-stripe original project update
+Add these 3 methods :
+handleCardPayment(clientSecret: string, el: Element, data?: any): any;
+confirmPaymentIntent(clientSecret: string, el: Element, data: any): any;
+retrievePaymentIntent(clientSecret: string): any;
+
+Need testing ...
 
 * Stripe Service
 * Lazy script loading
@@ -165,7 +171,7 @@ by using a ViewChild, the public method getCard()
 ```xml
 <form novalidate (ngSubmit)="buy()" [formGroup]="stripeTest">
   <input type="text" formControlName="name" placeholder="Jane Doe">
-  <ngx-stripe-sca-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-sca-card>
+  <ngx-stripe-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-card>
   <button type="submit">
     BUY
   </button>
