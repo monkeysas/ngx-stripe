@@ -168,11 +168,16 @@ export function isBankAccountData(
       bankAccountData.account_holder_type === 'company' ||
       bankAccountData.account_holder_type === undefined)
   );
+}
 
-export function isPii(pii: any): pii is Pii {
+export function isPii(
+  pii: any
+): pii is Pii {
   return pii === 'pii';
 }
 
-export function isPiiData(piiData: any): piiData is PiiData {
+export function isPiiData(
+  piiData: any
+): piiData is PiiData {
   return 'personal_id_number' in piiData;
 }

@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-stripe": [
-        "dist/ngx-stripe"
+      "ngx-stripe-sca": [
+        "dist/ngx-stripe-sca"
       ],
-      "ngx-stripe/*": [
-        "dist/ngx-stripe/*"
+      "ngx-stripe-sca/*": [
+        "dist/ngx-stripe-sca/*"
       ]
     }
   }

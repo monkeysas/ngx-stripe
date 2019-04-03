@@ -3,33 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-stripe": {
-      "root": "projects/ngx-stripe",
-      "sourceRoot": "projects/ngx-stripe/src",
+    "ngx-stripe-sca": {
+      "root": "projects/ngx-stripe-sca",
+      "sourceRoot": "projects/ngx-stripe-sca/src",
       "projectType": "library",
       "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-stripe/tsconfig.lib.json",
-            "project": "projects/ngx-stripe/ng-package.json"
+            "tsConfig": "projects/ngx-stripe-sca/tsconfig.lib.json",
+            "project": "projects/ngx-stripe-sca/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-stripe/src/test.ts",
-            "tsConfig": "projects/ngx-stripe/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-stripe/karma.conf.js"
+            "main": "projects/ngx-stripe-sca/src/test.ts",
+            "tsConfig": "projects/ngx-stripe-sca/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-stripe-sca/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-stripe/tsconfig.lib.json",
-              "projects/ngx-stripe/tsconfig.spec.json"
+              "projects/ngx-stripe-sca/tsconfig.lib.json",
+              "projects/ngx-stripe-sca/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -38,9 +38,9 @@
         }
       }
     },
-    "ngx-stripe-tester": {
-      "root": "projects/ngx-stripe-tester/",
-      "sourceRoot": "projects/ngx-stripe-tester/src",
+    "ngx-stripe-sca-tester": {
+      "root": "projects/ngx-stripe-sca-tester/",
+      "sourceRoot": "projects/ngx-stripe-sca-tester/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -48,21 +48,21 @@
         "build": {
           "builder": "ngx-build-plus:build",
           "options": {
-            "outputPath": "dist/ngx-stripe-tester",
-            "index": "projects/ngx-stripe-tester/src/index.html",
-            "main": "projects/ngx-stripe-tester/src/main.ts",
-            "polyfills": "projects/ngx-stripe-tester/src/polyfills.ts",
-            "tsConfig": "projects/ngx-stripe-tester/tsconfig.app.json",
+            "outputPath": "dist/ngx-stripe-sca-tester",
+            "index": "projects/ngx-stripe-sca-tester/src/index.html",
+            "main": "projects/ngx-stripe-sca-tester/src/main.ts",
+            "polyfills": "projects/ngx-stripe-sca-tester/src/polyfills.ts",
+            "tsConfig": "projects/ngx-stripe-sca-tester/tsconfig.app.json",
             "assets": [
-              "projects/ngx-stripe-tester/src/favicon.ico",
-              "projects/ngx-stripe-tester/src/assets",
-              "projects/ngx-stripe-tester/src/manifest.webmanifest",
-              "projects/ngx-stripe-tester/src/robots.txt",
-              "projects/ngx-stripe-tester/src/sitemap.xml"
+              "projects/ngx-stripe-sca-tester/src/favicon.ico",
+              "projects/ngx-stripe-sca-tester/src/assets",
+              "projects/ngx-stripe-sca-tester/src/manifest.webmanifest",
+              "projects/ngx-stripe-sca-tester/src/robots.txt",
+              "projects/ngx-stripe-sca-tester/src/sitemap.xml"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "projects/ngx-stripe-tester/src/styles.css"
+              "projects/ngx-stripe-sca-tester/src/styles.css"
             ],
             "scripts": []
           },
@@ -70,8 +70,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ngx-stripe-tester/src/environments/environment.ts",
-                  "with": "projects/ngx-stripe-tester/src/environments/environment.prod.ts"
+                  "replace": "projects/ngx-stripe-sca-tester/src/environments/environment.ts",
+                  "with": "projects/ngx-stripe-sca-tester/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -97,36 +97,36 @@
         "serve": {
           "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "ngx-stripe-tester:build"
+            "browserTarget": "ngx-stripe-sca-tester:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-stripe-tester:build:production"
+              "browserTarget": "ngx-stripe-sca-tester:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-stripe-tester:build"
+            "browserTarget": "ngx-stripe-sca-tester:build"
           }
         },
         "test": {
           "builder": "ngx-build-plus:karma",
           "options": {
-            "main": "projects/ngx-stripe-tester/src/test.ts",
-            "polyfills": "projects/ngx-stripe-tester/src/polyfills.ts",
-            "tsConfig": "projects/ngx-stripe-tester/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-stripe-tester/karma.conf.js",
+            "main": "projects/ngx-stripe-sca-tester/src/test.ts",
+            "polyfills": "projects/ngx-stripe-sca-tester/src/polyfills.ts",
+            "tsConfig": "projects/ngx-stripe-sca-tester/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-stripe-sca-tester/karma.conf.js",
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "projects/ngx-stripe-tester/src/styles.css"
+              "projects/ngx-stripe-sca-tester/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/ngx-stripe-tester/src/favicon.ico",
-              "projects/ngx-stripe-tester/src/assets",
-              "projects/ngx-stripe-tester/src/manifest.webmanifest"
+              "projects/ngx-stripe-sca-tester/src/favicon.ico",
+              "projects/ngx-stripe-sca-tester/src/assets",
+              "projects/ngx-stripe-sca-tester/src/manifest.webmanifest"
             ]
           }
         },
@@ -134,8 +134,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-stripe-tester/tsconfig.app.json",
-              "projects/ngx-stripe-tester/tsconfig.spec.json"
+              "projects/ngx-stripe-sca-tester/tsconfig.app.json",
+              "projects/ngx-stripe-sca-tester/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -144,27 +144,27 @@
         }
       }
     },
-    "ngx-stripe-tester-e2e": {
-      "root": "projects/ngx-stripe-tester-e2e/",
+    "ngx-stripe-sca-tester-e2e": {
+      "root": "projects/ngx-stripe-sca-tester-e2e/",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ngx-stripe-tester-e2e/protractor.conf.js",
-            "devServerTarget": "ngx-stripe-tester:serve"
+            "protractorConfig": "projects/ngx-stripe-sca-tester-e2e/protractor.conf.js",
+            "devServerTarget": "ngx-stripe-sca-tester:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-stripe-tester:serve:production"
+              "devServerTarget": "ngx-stripe-sca-tester:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "projects/ngx-stripe-tester-e2e/tsconfig.e2e.json",
+            "tsConfig": "projects/ngx-stripe-sca-tester-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -173,5 +173,5 @@
       }
     }
   },
-  "defaultProject": "ngx-stripe"
+  "defaultProject": "ngx-stripe-sca"
 }

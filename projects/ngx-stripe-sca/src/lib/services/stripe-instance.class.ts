@@ -133,4 +133,12 @@ export class StripeInstance implements StripeServiceInterface {
     }
     return undefined;
   }
+
+  public handleCardPayment(clientSecret: string, el: Element, data: any) {
+    const stripe = this.getInstance();
+    if (stripe) {
+      return stripe.handleCardPayment(clientSecret, el, data);
+    }
+    return undefined;
+  }
 }

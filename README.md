@@ -1,11 +1,11 @@
 # NgxStripe
 
-[![version](https://img.shields.io/npm/v/ngx-stripe.svg)](https://www.npmjs.com/package/ngx-stripe)
-[![license](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/ngx-stripe)
+[![version](https://img.shields.io/npm/v/ngx-stripe-sca.svg)](https://www.npmjs.com/package/ngx-stripe-sca)
+[![license](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/ngx-stripe-sca)
 
 <h1 align="center">
   <img width="40" valign="bottom" src="https://angular.io/assets/images/logos/angular/angular.svg">
-  ngx-stripe
+  ngx-stripe-sca
 </h1>
 
 <h4 align="center">
@@ -13,6 +13,8 @@
 </h4>
 
 ## Features
+
+Add SCA PaymentIntent => waiting for ngx-stripe original project update
 
 * Stripe Service
 * Lazy script loading
@@ -22,7 +24,7 @@
 To install this library, run:
 
 ```bash
-$ npm install ngx-stripe
+$ npm install ngx-stripe-sca
 ```
 
 ## Using the library
@@ -43,7 +45,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { NgxStripeModule } from 'ngx-stripe';
+import { NgxStripeModule } from 'ngx-stripe-sca';
 
 @NgModule({
   declarations: [
@@ -82,7 +84,7 @@ Example component (more HTML and CSS examples can be found at the [Stripe Elemen
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
-import { StripeService, Elements, Element as StripeElement, ElementsOptions } from "ngx-stripe";
+import { StripeService, Elements, Element as StripeElement, ElementsOptions } from "ngx-stripe-sca";
 
 @Component({
   selector: 'app-stripe-test',
@@ -163,7 +165,7 @@ by using a ViewChild, the public method getCard()
 ```xml
 <form novalidate (ngSubmit)="buy()" [formGroup]="stripeTest">
   <input type="text" formControlName="name" placeholder="Jane Doe">
-  <ngx-stripe-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-card>
+  <ngx-stripe-sca-card [options]="cardOptions" [elementsOptions]="elementsOptions"></ngx-stripe-sca-card>
   <button type="submit">
     BUY
   </button>
@@ -173,7 +175,7 @@ by using a ViewChild, the public method getCard()
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
-import { StripeService, StripeCardComponent, ElementOptions, ElementsOptions } from "ngx-stripe";
+import { StripeService, StripeCardComponent, ElementOptions, ElementsOptions } from "ngx-stripe-sca";
 
 @Component({
   selector: 'app-stripe-test',
@@ -245,7 +247,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { NgxStripeModule } from 'ngx-stripe';
+import { NgxStripeModule } from 'ngx-stripe-sca';
 
 @NgModule({
   declarations: [
@@ -269,7 +271,7 @@ same methods of old StripeService.
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
-import { StripeInstance, StripeFactoryService } from "ngx-stripe";
+import { StripeInstance, StripeFactoryService } from "ngx-stripe-sca";
 
 @Component({
   selector: 'app-stripe-test',
@@ -294,7 +296,7 @@ If you prefer to work the old StripeService, you can also update the key:
 ```typescript
 import { Component, OnInit } from '@angular/core';
 
-import { StripeService } from 'ngx-stripe';
+import { StripeService } from 'ngx-stripe-sca';
 
 @Component({
   selector: 'app-stripe-test',
@@ -321,7 +323,7 @@ you can now access both your elements instance and a reference to Stripe:
 ```typescript
 import { Component, OnInit } from '@angular/core';
 
-import { StripeService } from 'ngx-stripe';
+import { StripeService } from 'ngx-stripe-sca';
 
 @Component({
   selector: 'app-stripe-test',

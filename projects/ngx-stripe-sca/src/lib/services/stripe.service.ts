@@ -89,4 +89,8 @@ export class StripeService implements StripeServiceInterface {
   public paymentRequest(options: PaymentRequestOptions) {
     return this.stripe.paymentRequest(options);
   }
+
+  public handleCardPayment(clientSecret: string, el: Element, data: any) {
+    return this.stripe.handleCardPayment(clientSecret, el, data);
+  }
 }

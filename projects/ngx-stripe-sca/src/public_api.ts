@@ -2,7 +2,7 @@
  * Public API Surface of ngx-stripe
  */
 
-export { NgxStripeModule } from './lib/ngx-stripe.module';
+export { NgxStripeModule } from './lib/ngx-stripe-sca.module';
 
 export { StripeCardComponent } from './lib/components/stripe-card.component';
 

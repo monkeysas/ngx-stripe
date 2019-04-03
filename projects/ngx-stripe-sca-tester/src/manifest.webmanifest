@@ -1,6 +1,6 @@
 {
-  "name": "ngx-stripe-tester",
-  "short_name": "ngx-stripe-tester",
+  "name": "ngx-stripe-sca-tester",
+  "short_name": "ngx-stripe-sca-tester",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

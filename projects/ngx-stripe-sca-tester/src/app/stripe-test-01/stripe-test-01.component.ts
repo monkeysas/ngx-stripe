@@ -6,7 +6,7 @@ import {
   ElementOptions,
   ElementsOptions,
   StripeCardComponent
-} from 'ngx-stripe';
+} from 'ngx-stripe-sca';
 
 @Component({
   selector: 'app-test-01',
