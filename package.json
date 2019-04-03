@@ -9,7 +9,7 @@
     "copy:readme": "cpx README.md dist/ngx-stripe-sca",
     "copy:license": "cpx LICENSE.md dist/ngx-stripe-sca",
     "package": "npm run build:lib && npm run copy:readme && npm run copy:license && npm run pack:lib",
-    "publish": "npm publish dist/ngx-stripe-sca/ngx-stripe-sca-7.2.1.tgz",
+    "publish": "npm publish dist/ngx-stripe-sca/ngx-stripe-sca-7.2.2.tgz",
     "start": "ng serve ngx-stripe-sca-tester",
     "test": "ng test ngx-stripe-sca",
     "lint": "ng lint",
